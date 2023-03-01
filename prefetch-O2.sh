@@ -12,13 +12,9 @@
 module load sratoolkit/2.10.7
 
 ### edit needed - insert the targets from GEO 
-# pull data from GEO 
-###
+### to pull data from GEO 
+### 
 prefetch SRR13021191
-prefetch SRR13021192
-prefetch SRR13021193
-prefetch SRR13021194
-prefetch SRR13021195
 
 # extract fastq files and compress
 for library in SRR*
