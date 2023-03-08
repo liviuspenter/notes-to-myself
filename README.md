@@ -8,4 +8,6 @@ gene quantification with salmon tools on single-end data on O2 [salmon-single-en
 
 create TPM matrix from salmon tools output [generate-TPM.R](generate-TPM.R)
 
-run TRUST4 and extract TCR on O2 [TRUST4-O2.sh](TRUST4-O2.sh)
+run TRUST4 and extract TCR from single-end data on O2 with alignment [TRUST4-O2-single-end.sh](TRUST4-O2-single-end.sh)
+
+run TRUST4 and extract TCR from paired-end data on O2 without alignment [TRUST4-O2-paired-end.sh](TRUST4-O2.sh)
