@@ -17,3 +17,7 @@ create TPM matrix from salmon tools output [generate-TPM.R](generate-TPM.R)
 run TRUST4 and extract TCR from single-end data on O2 with alignment [TRUST4-O2-single-end.sh](TRUST4-O2-single-end.sh)
 
 run TRUST4 and extract TCR from paired-end data on O2 without alignment [TRUST4-O2-paired-end.sh](TRUST4-O2.sh)
+
+## alignment
+
+realign hg19 to hg38 on O2 [realign_hg38.sh](realign_hg38.sh)
