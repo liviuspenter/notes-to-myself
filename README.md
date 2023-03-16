@@ -21,3 +21,5 @@ run TRUST4 and extract TCR from paired-end data on O2 without alignment [TRUST4-
 ## alignment
 
 realign hg19 to hg38 on O2 [realign_hg38.sh](realign_hg38.sh)
+
+quick hack to quantify single nucleotide polymorphisms or indels [primitive-pileup.py](primitive-pileup.py)
