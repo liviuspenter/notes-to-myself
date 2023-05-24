@@ -1,7 +1,8 @@
 #!/bin/bash
-
+########################################################
 # transfer data to dbGap from rc-stor15.dfci.harvard.edu 
-#
+########################################################
+
 # step1:
 # download version of aspera compatible with glibc on rc-stor15 from https://www.ibm.com/aspera/connect/
 # ibm-aspera-connect-3.11.2.63-linux-g2.12-64.tar.gz
@@ -19,7 +20,7 @@
 # step5: 
 # dbGap upload
 
-# export ASPERA_SCP_PASS (XXX is communicated from dbGap curator)
+# export ASPERA_SCP_PASS (XXX is communicated by dbGap curator)
 export ASPERA_SCP_PASS=XXX
 
 # directory fastq contains fastq files to be uploaded
