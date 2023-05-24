@@ -17,9 +17,10 @@
 # ascp -A 
 #
 # step5: 
-#
 # dbGap upload
-# export ASPERA_SCP_PASS (communicated from dbGap curator)
+
+# export ASPERA_SCP_PASS (XXX is communicated from dbGap curator)
 export ASPERA_SCP_PASS=XXX
 
+# directory fastq contains fastq files to be uploaded
 ascp -i $HOME/.aspera/connect/etc/aspera_tokenauth_id_rsa -Q -l 1000m -k 1 fastq asp-dbgap@gap-submit.ncbi.nlm.nih.gov:protected
