@@ -4,6 +4,10 @@
 
 download data from NCBI GEO on O2 [prefetch-O2.sh](prefetch-O2.sh)
 
+## dbGap
+
+upload data to dbGap from rc-stor15 with aspera [dbGap_aspera_rc-stor15.sh](dbGap_aspera_rc-stor15.sh)
+
 ## salmon 
 
 gene quantification with salmon tools on paired-end data on O2 [salmon-paired-end-O2.sh](salmon-paired-end-O2.sh)
