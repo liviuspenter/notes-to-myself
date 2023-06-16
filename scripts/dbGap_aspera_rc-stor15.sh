@@ -25,3 +25,10 @@ export ASPERA_SCP_PASS=XXX
 
 # directory fastq contains fastq files to be uploaded
 ascp -i $HOME/.aspera/connect/etc/aspera_tokenauth_id_rsa -Q -l 1000m -k 1 fastq asp-dbgap@gap-submit.ncbi.nlm.nih.gov:protected
+
+## alternative solution:
+## for lots of files this will fail so it's necessary to transfer files using a loop 
+#for file in *.gz
+#do
+#	ascp -i $HOME/.aspera/connect/etc/aspera_tokenauth_id_rsa -Q -l 1000m -k 1 $file asp-dbgap@gap-submit.ncbi.nlm.nih.gov:protected
+#done
