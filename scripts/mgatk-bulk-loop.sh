@@ -15,6 +15,7 @@ module load R/4.2.1
 # loop over libraries and perform bulk mtDNA mutation calling using mgatk 
 # this short scripts assumes that each library / bam file sits in an individual directory
 
+# modify to cater to your needs
 for library in DFCI*
 do
 	echo $library
