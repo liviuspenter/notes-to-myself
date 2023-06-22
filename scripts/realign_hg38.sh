@@ -4,7 +4,7 @@
                                            # -N 1 means all cores will be on the same node)
 #SBATCH -t 0-23:59                         # Runtime in D-HH:MM format
 #SBATCH -p medium                           # Partition to run in
-#SBATCH --mem=64G                          # Memory total in MB (for all cores)
+#SBATCH --mem=24G                          # Memory total in MB (for all cores)
 #SBATCH -o hostname_%j.out                 # File to which STDOUT will be written, including job ID
 #SBATCH -e hostname_%j.err                 # File to which STDERR will be written, including job ID
 #SBATCH --mail-type=ALL                    # Type of email notification- BEGIN,END,FAIL,ALL
@@ -14,18 +14,24 @@ module load bowtie2/2.3.4.3
 
 mkdir hg38
 
+BOWTIE_INDEX="/n/data2/dfci/medonc/cwu/livius/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.bowtie_index"
+
 for bam_file in *.bam
 do
 	library=`basename $bam_file .bam`
 	echo $library
 
-	# extract fastq files
-	#samtools fastq -f 0x2 $bam_file -1 tmp1.fastq -2 tmp2.fastq -@ 12
+	if test -f "hg38/${library}.bam"; then
+		echo "$library already processed."
+		continue
+	fi
 
+ 	# extract fastq files
+	#samtools fastq -f 0x2 $bam_file -1 tmp1.fastq -2 tmp2.fastq -@ 12
 	gatk SamToFastq --INPUT $bam_file --FASTQ tmp1.fastq --SECOND_END_FASTQ tmp2.fastq
 
 	# alignment against hg38
-	bowtie2 -x ../GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.bowtie_index --very-sensitive -p 12 -1 tmp1.fastq -2 tmp2.fastq -S tmp.sam
+	bowtie2 -x $BOWTIE_INDEX --very-sensitive -p 12 -1 tmp1.fastq -2 tmp2.fastq -S tmp.sam
 
 	# fix mates
 	gatk FixMateInformation --INPUT tmp.sam --ADD_MATE_CIGAR true
