@@ -27,3 +27,7 @@ run TRUST4 and extract TCR from paired-end data on O2 without alignment [TRUST4-
 realign hg19 to hg38 on O2 [realign_hg38.sh](scripts/realign_hg38.sh)
 
 quick hack to quantify single nucleotide polymorphisms or indels [primitive-pileup.py](scripts/primitive-pileup.py)
+
+## mtDNA
+
+loop over directories and perform bulk mtDNA calling using [mgatk](https://github.com/caleblareau/mgatk) [mgatk-bulk-loop.sh](scripts/mgatk-bulk-loop.sh)
