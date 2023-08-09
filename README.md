@@ -4,6 +4,8 @@
 
 download data from NCBI GEO on O2 [prefetch-O2.sh](scripts/prefetch-O2.sh)
 
+download data from NCBI GEO using list of libraries on O2 [prefetch-list-O2.sh](scripts/prefetch-list-O2.sh)
+
 ## dbGap
 
 upload data to dbGap from rc-stor15 with aspera [dbGap_aspera_rc-stor15.sh](scripts/dbGap_aspera_rc-stor15.sh)
