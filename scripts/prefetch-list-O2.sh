@@ -16,7 +16,7 @@ module load sratoolkit/2.10.7
 ### 
 while read library; do
 	echo $library
-  # download from NCBI Geo
+	# download from NCBI Geo
 	prefetch $library
 	cd $library
 	# extract fastq files and compress
