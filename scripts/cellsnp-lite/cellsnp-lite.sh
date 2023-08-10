@@ -9,6 +9,7 @@
 #SBATCH -e hostname_%j.cellsnp-lite.err                 # File to which STDERR will be written, including job ID
 #SBATCH --mail-type=ALL                    # Type of email notification- BEGIN,END,FAIL,ALL
 
+# run cellsnp-lite on output of cellranger scRNA-seq library
 gunzip -c $1/outs/filtered_feature_bc_matrix/barcodes.tsv.gz | cat > $1/outs/filtered_feature_bc_matrix/barcodes.tsv
 
 cellsnp-lite --genotype -R /home/lp175/snp_reference/genome1K.phase3.SNP_AF5e2.chr1toX.hg38.vcf.gz \
