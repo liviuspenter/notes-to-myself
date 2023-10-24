@@ -35,6 +35,9 @@ do
 	# index file 
 	samtools index ${library}.bam
 
+	# clean up
+	rm tmp*
+
 	cd ..
 
 done
