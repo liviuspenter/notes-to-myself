@@ -30,6 +30,8 @@ realign hg19 to hg38 on O2 [realign_hg38.sh](scripts/realign_hg38.sh)
 
 quick hack to quantify single nucleotide polymorphisms or indels [primitive-pileup.py](scripts/primitive-pileup.py)
 
+loop over NCBI GEO data and align [align-hg38-single-end.sh](scripts/align-hg38-single-end.sh) [align-hg38-paired-end.sh](scripts/align-hg38-paired-end.sh) 
+
 ## mtDNA
 
 loop over directories and perform bulk mtDNA calling using [mgatk](https://github.com/caleblareau/mgatk) [mgatk-bulk-loop.sh](scripts/mgatk-bulk-loop.sh)
